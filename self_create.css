@@ -1,0 +1,175 @@
+
+a.p_appear{
+    display: none;
+    padding: 5%;
+}/*連結隱藏*/
+div.p_appear:hover a{
+    display: inline;
+}/*連結出現*/
+a.highlight:hover{
+    font-size: larger;
+    color: red;
+}/*連結放大變紅效果*/
+i.size_large{
+    font-size: larger;
+}/*圖標放大*/
+.text_center{
+    text-align: center;
+}/*文字置中*/
+.card{
+    perspective: 500px;
+}/*卡片大小*/
+.face{
+    transition: 0.8s;
+    backface-visibility: hidden;
+}/*卡片正面隱藏*/
+
+/*.card:hover .face{
+    transform: rotateY(-180deg);
+}卡片正面翻轉效果*/
+
+.back{
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: 0.8s;
+}/*卡片背面隱藏*/
+.card:hover .back{
+    transform: rotateY(0deg);
+}/*鼠標移入時背面顯示*/
+h2.hollow{
+    color: white;
+    text-shadow: 
+    1px 0 black,
+    1px 1px black,
+    1px -1px black,
+    0 1px black,
+    0 -1px black,
+    -1px 0 black,
+    -1px 1px black,
+    -1px -1px black;
+}/*h2標題中空效果*/
+.card_padding_red_blue{
+    margin: 0 auto;
+    background: repeating-linear-gradient(
+        -45deg,
+        red,
+        red 10px,
+        white 10px,
+        white 20px,
+        blue 20px,
+        blue 30px,
+        white 30px,
+        white 40px
+    );
+    padding: 5px;
+}/*紅藍邊框卡片*/
+.card_padding_green_orange{
+    margin: 0 auto;
+    background: repeating-linear-gradient(
+        -45deg,
+        green,
+        green 10px,
+        white 10px,
+        white 20px,
+        rgb(251, 98, 3) 20px,
+        rgb(251, 98, 3) 30px,
+        white 30px,
+        white 40px
+    );
+    padding: 5px;
+}/*綠橘邊框卡片*/
+.container_background_lightblue{
+    background-color: lightblue;
+    padding: 10px;
+}/*淺藍色卡片*/
+.container_background_lightpink{
+    background-color: lightpink;
+    padding: 10px;
+}/*淺粉色卡片*/
+h2.h2_color{
+    color: green;
+}/*綠色h2標題*/
+h2 span.shadow{
+    text-shadow: -6px -2px 2px rgb(57, 181, 43);
+    filter: blur(0.5px);
+    font-weight: 600;
+    /*transform: scaleY(0.5);
+    transform: skew(0deg,50deg);*/
+}/*綠色h2標題陰影效果*/
+::selection{
+    color: red;
+    background: yellow;
+}/*文字選取效果*/
+div.school_background_img{
+    background-image: url('img/pccu.png');
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*opacity: 1;
+    position: relative;*/
+}/*學歷背景圖*/
+.text_effect span{
+    background: linear-gradient(to right,#ec695c,#61c454) no-repeat right bottom;
+    background-size: 0 5px;
+    transition: background-size 1300ms;
+    padding: 3px 0;
+}/*文字底線樣式*/
+.text_effect span:hover{
+    background-position-x: left;
+    background-size: 100% 5px;
+}/*文字底線效果*/
+.navigation_container_height{
+    height: 51px; 
+  } /*設置navigation容器高度 */
+
+/*ul.navigation_container{
+    list-style-type: none;
+    background-color: aqua;
+    margin: 0;;
+    padding: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}/*導航欄樣式
+ul.navigation_container li{
+    float: left;
+    border-right: 2px solid white;
+}/*導航欄內li對齊方式
+ul.navigation_container li a{
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: larger;
+    padding: 20px;
+}/*導航欄連結樣式
+ul.navigation_container li a:hover{
+    background-color: rebeccapurple;
+    color: limegreen;
+}/*導航欄內滑鼠移入時樣式
+ul.navigation_container li a.active{
+    background-color: rebeccapurple;
+    color: limegreen;
+}/*導航欄內顯示當前頁面所在
+*/
+
+.footer_fa_color{
+   color: blue;
+}/*頁尾圖標顏色*/
+.p_margin_top{
+    margin-top: 7px;
+}/*p元素下移*/
+.navbar_bg_col{
+    background-color:#009688;
+}/*導航欄背景色*/
+.navbar_border_right{
+    border-right: 2px solid white;
+}/*導航欄右邊框白色*/
+.navbar_hover, .navbar_hover:hover{
+    font-size: larger;
+}/*導航欄鼠標移入*/
+.z_index_2{
+    z-index: 2;
+}/*高層級顯示*/
