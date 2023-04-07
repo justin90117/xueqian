@@ -1,13 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>按鈕切換背景圖片</title>
+    <title>Seasons</title>
     <link rel="stylesheet" href="seasons.css">
+    <link rel="stylesheet" href="/self_create.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/popper/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid navbar_bg_col">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vavbarToggler"
+                aria-controls="vavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="vavbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link" aria-current="page" href="/index.html"><img src="/img/star_half_icon.svg" alt="star_half_icon">履歷</a>
+                    </li>
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link" aria-current="page" href="/canvas/canvas.html"><img src="/img/filetype_js_icon.svg" alt="filetype_js_icon">特效作品1</a>
+                    </li>
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link active" aria-current="page" href="/seasons/seasons.html"><img src="/img/seansons.svg" alt="seansons_icon">特效作品2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <div class="button_container">
         <button id="bg1button" onclick="removeAllClasses()" class="btn_style">春</button>
