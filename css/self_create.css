@@ -99,7 +99,7 @@ h2 span.green_shadow{
     background: yellow;
 }/*文字選取效果*/
 div.school_background_img{
-    background-image: url('img/pccu.png');
+    background-image: url('/www/images/img/pccu.png');
     width: 100%;
     height: 100%;
     background-size: contain;

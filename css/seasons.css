@@ -1,33 +1,33 @@
 body {
-    background-image: url('/seasons/gif/spring.gif');
+    background-image: url('/www/images/gif/spring.gif');
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
 }
 
 body.bg1class {
-    background-image: url('/seasons/gif/spring.gif');
+    background-image: url('/www/images/gif/spring.gif');
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
 }
 
 body.bg2class {
-    background-image: url('/seasons/gif/summer.gif');
+    background-image: url('/www/images/gif/summer.gif');
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
 }
 
 body.bg3class {
-    background-image: url('/seasons/gif/autumn.gif');
+    background-image: url('/www/images/gif/autumn.gif');
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;
 }
 
 body.bg4class {
-    background-image: url('/seasons/gif/winter.gif');
+    background-image: url('/www/images/gif/winter.gif');
     background-size: 100%;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease-in-out;

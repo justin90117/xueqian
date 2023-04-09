@@ -1,9 +1,7 @@
 
-
 const bg1button = document.querySelector('#bg1button');
 const bg2button = document.querySelector('#bg2button');
 let body = document.getElementsByTagName("body")[0];
-
 
 
 bg1button.addEventListener('click', function () {
