@@ -37,6 +37,7 @@ body.bg4class {
     display: flex;
     justify-content: center;
     height: 10%;
+    margin-top: 61px;
 }
 
 .btn_style {
