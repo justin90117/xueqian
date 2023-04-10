@@ -142,3 +142,6 @@ div.school_background_img{
 .z_index_2{
     z-index: 2;
 }/*高層級顯示*/
+.navbar a.active_red{
+    color: rgb(198, 39, 39);
+}/*導航欄active*/

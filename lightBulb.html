@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+<title>lightBulb</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/www/css/self_create.css" />
+<!--tailwind的CDN 
+    <script src="https://cdn.tailwindcss.com"></script>
+    -->
+<!--bootstrap的CDN-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+<!--bootstrap的JS組件-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
+    </script>
+
+<!-- 引入Bootstrap CSS文件 -->
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+<!-- 引入jQuery和Popper.js -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/popper/dist/umd/popper.min.js"></script>
+
+<!-- 引入Bootstrap JS文件 -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<style>
+    body {
+        background: #171616;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .bulb {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: radial-gradient(black 50%, #bcbaba);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -2;
+    }
+    #stave{
+        width: 35px;
+        height: 180px;
+        background-color: #686868;
+        border-radius: 5px 5px 0 0;
+        position: absolute;
+        margin-top: 90px;
+        z-index: -1;
+    }
+    polyline{
+        fill: transparent;
+        stroke: #95a5a6;
+        stroke-width: 3;
+    }
+    .base{
+        width: 135px;
+        height: 105px;
+        background-color: aqua;
+        margin-top: -16px;
+    }
+    .bar{
+        width: 146px;
+        height: 13px;
+        background-color: #d9c7c7;
+        border-radius: 8px;
+        transform: translate(-6px,13px) rotate(-7deg);
+    }
+    .bar:nth-child(2){
+        transform: translate(-6px,32px) rotate(-7deg);
+    }
+    .bar:nth-child(3){
+        transform: translate(-6px,50px) rotate(-7deg);
+    }
+    .basecup{
+        width: 30px;
+        height: 22px;
+        background-color: aqua;
+        border-radius: 0 0 20px 20px;
+        margin: 65px auto;
+    }
+    #on-off:checked ~ .bulb{
+        background: radial-gradient(#cbc6c6 40%,rgb(240, 240, 43));
+        filter: drop-shadow(0 0 150px #eedd7d);
+    }
+    #on-off:checked ~ .bulb polyline{
+        stroke: #f2f0e6;
+    }
+    #on-off:checked ~ .bulb #stave{
+        background-color: #d0c89f;
+    }
+    .on-off-btn{
+        padding: 10px;
+        background-color: white;
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+        <div class="container-fluid navbar_bg_col">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vavbarToggler"
+                aria-controls="vavbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="vavbarToggler">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link" aria-current="page" href="/www/index.html">
+                            <img src="/www/images/img/star_half_icon.svg" alt="star_half_icon">履歷</a>
+                    </li>
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link" aria-current="page" href="/www/canvas.html">
+                            <img src="/www/images/img/filetype_js_icon.svg" alt="filetype_js_icon">特效作品1</a>
+                    </li>
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link" aria-current="page" href="/www/seasons.html">
+                            <img src="/www/images/img/seansons_icon.svg" alt="seansons_icon">特效作品2</a>
+                    </li>
+                    <li class="nav-item navbar_border_right navbar_hover">
+                        <a class="nav-link active_red" aria-current="page" href="/www/lightBulb.html">
+                            <img src="/www/images/img/lightbulb_icon.svg" alt="lightbulb_icon">特效作品3</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <input type="checkbox" id="on-off" style="display: none;">
+    <div class="bulb">
+        <div id="stave"></div>
+        <svg width="90" height="190">
+            <polyline points="70,65,0,80, 90,95,0,110, 90,125,0,140, 90,150,0,165, 90,175,20,190"></polyline>
+        </svg>
+    </div>
+    
+    <label class="base" >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="basecup"></div>
+    </label>
+    <label class="on-off-btn" for="on-off">燈泡開關(點擊)</label>
+</body>
+
+</html>
